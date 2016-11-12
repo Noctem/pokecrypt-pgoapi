@@ -3,9 +3,11 @@ Thanks a lot to @marcel
 use "make all"
 
 
-https://gist.github.com/ZeChrales/28373120d41829d8e4cd3bdc959cb275
+https://gist.github.com/Noctem/018c107d6a6297c24e36a00d4da046c9
 Thanks a lot to @Waryas
-Linux :
-	cc -fPIC -shared -o libnhash.so libnhash.c
-Windows :
-	oh plz !
+Linux:
+	cc -fPIC -O3 -shared niahash.c -o libniantichash-linux-x86-64.so
+macOS:
+	clang -march=core2 -shared -fPIC -mmacosx-version-min=10.7 -O3 niahash.c -o libniantichash-macos-x86-64.dylib
+Windows:
+	x86_64-w64-mingw32-gcc -O3 -fPIC -shared niahash.c -o libniantichash-windows-x86-64.dll
